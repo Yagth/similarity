@@ -1,7 +1,9 @@
+"use client";
+
 import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
-import { Providers } from "@/components";
 import { Inter } from "next/font/google";
+import Providers from "@/components/Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,10 @@ export default function RootLayout({
       lang="en"
     >
       <body className="min-h-screen bg-slate-50 dark:bg-slate-900 antialiased">
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Navbar />
+        </Providers>
       </body>
     </html>
   );
