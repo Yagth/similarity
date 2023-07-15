@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FC } from "react";
 import { buttonVariants } from "@/components/Button";
 import SignInButton from "@/components/SignInButton";
+import SignOutButton from "@/components/SignOutButton";
 
 interface NavbarProps {}
 
