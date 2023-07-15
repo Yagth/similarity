@@ -1,6 +1,7 @@
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { FC } from "react";
+import { buttonVariants } from "@/components/Button";
 
 interface NavbarProps {}
 
@@ -32,8 +33,8 @@ const Navbar = async ({}) => {
               >
                 Dashboard
               </Link>
+              <SignOutButton />
             </>
-            <SignOutButton />
           ) : (
             <SignInButtons />
           )}
