@@ -904,7 +904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@radix-ui/react-dropdown-menu@npm:^2.0.3":
+"@radix-ui/react-dropdown-menu@npm:^2.0.5":
   version: 2.0.5
   resolution: "@radix-ui/react-dropdown-menu@npm:2.0.5"
   dependencies:
@@ -5578,7 +5578,7 @@ __metadata:
     "@mui/x-data-grid": ^6.0.0
     "@next-auth/prisma-adapter": ^1.0.5
     "@prisma/client": ^4.11.0
-    "@radix-ui/react-dropdown-menu": ^2.0.3
+    "@radix-ui/react-dropdown-menu": ^2.0.5
     "@radix-ui/react-scroll-area": ^1.0.2
     "@radix-ui/react-tabs": ^1.0.2
     "@tailwindcss/typography": ^0.5.9
