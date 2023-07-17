@@ -4,7 +4,7 @@ import { FC, useState, useEffect } from "react";
 import { buttonVariants } from "@/ui/Button";
 import SigninButton from "@/ui/SigninButton";
 import SignOutButton from "@/ui/SignOutButton";
-
+import ThemeToggle from "@/components/ThemeToggle";
 const Navbar = () => {
   const [session, setSession] = useState();
 
@@ -26,9 +26,11 @@ const Navbar = () => {
         <Link href="/" className={buttonVariants({ variant: "link" })}>
           Text Similarity 1.0
         </Link>
-        <div className="md:hidden">{/* <ThemeToggle /> */}</div>
+        <div className="md:hidden">
+          <ThemeToggle />
+        </div>
         <div className="hidden md:flex gap-4">
-          {/* <ThemeToggle /> */}
+          <ThemeToggle />
           <Link
             href="/documentation"
             className={buttonVariants({ variant: "ghost" })}
