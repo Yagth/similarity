@@ -20,7 +20,7 @@ const SigninButton: FC<SigninButtonProps> = ({}) => {
       toast({
         title: "Error signing in",
         messge: "Please try again later",
-        type: "Error",
+        type: "error",
       });
     }
   };
