@@ -2,8 +2,8 @@ import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { FC, useState, useEffect } from "react";
 import { buttonVariants } from "@/ui/Button";
-import SigninButton from "@/components/SigninButton";
-import SignOutButton from "@/components/SignOutButton";
+import SigninButton from "@/ui/SigninButton";
+import SignOutButton from "@/ui/SignOutButton";
 
 const Navbar = () => {
   const [session, setSession] = useState();
