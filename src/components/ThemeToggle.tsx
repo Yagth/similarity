@@ -3,12 +3,12 @@
 import { FC } from "react";
 import { useTheme } from "next-themes";
 import Button from "@/ui/Button";
-import { DropdownMenu } from "@/ui/DropdownMenu";
 import {
+  DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "@radix-ui/react-dropdown-menu";
+} from "@/ui/DropdownMenu";
 import { Sun, Moon, Laptop } from "lucide-react";
 import Icons from "./Icons";
 
@@ -32,15 +32,15 @@ const ThemeToggle: FC<ThemeToggleProps> = ({}) => {
         // className={isOpen ? "visible" : "hidden"}
       >
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          <Icons.Sun className="mr-2 h-4 w-4"></Sun>
+          <Icons.Sun className="mr-2 h-4 w-4" />
           <span>Light</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <Icons.Moon className="mr-2 h-4 w-4"></Moon>
+          <Icons.Moon className="mr-2 h-4 w-4" />
           <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <Icons.Laptop className="mr-2 h-4 w-4"></Laptop>
+          <Icons.Laptop className="mr-2 h-4 w-4" />
           <span>System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
