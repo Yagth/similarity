@@ -15,6 +15,7 @@ interface ThemeToggleProps {}
 
 const ThemeToggle: FC<ThemeToggleProps> = ({}) => {
   const { setTheme } = useTheme();
+  //   const [isOpen, setIsOpen] = useState(false);
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -24,7 +25,11 @@ const ThemeToggle: FC<ThemeToggleProps> = ({}) => {
           <span className="sr-only">Toggle theme</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" forceMount>
+      <DropdownMenuContent
+        align="end"
+        // forceMount
+        // className={isOpen ? "visible" : "hidden"}
+      >
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Sun className="mr-2 h-4 w-4"></Sun>
           <span>Light</span>
