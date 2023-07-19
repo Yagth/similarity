@@ -43,8 +43,26 @@ export const authOptions: NextAuthOptions = {
 
       return session;
     },
-    async jwt({token, user}) {
-        const dbuser = await db.
-    }
+    async jwt({ token, user }) {
+      const dbuser = await db.user.findFirst({
+        where: {
+          email: token.email,
+        },
+      });
+
+      if (!dbuser) {
+        token.id = user!.id; // ! used to let typescript know that we know the variable user exists and it shouldn't complain about it
+        return token;
+      }
+      return {
+        id: dbUser.id,
+        name: dbUser.name,
+        email: dbUser.email,
+        picture: dbUser.image,
+      };
+    },
+    reidrect() {
+      return "/dashboard";
+    },
   },
 };
