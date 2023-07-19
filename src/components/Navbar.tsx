@@ -5,7 +5,6 @@ import { buttonVariants } from "@/ui/Button";
 import SigninButton from "@/ui/SigninButton";
 import SignOutButton from "@/ui/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
-// import { authOptions } from "@/lib/auth";
 
 const Navbar = () => {
   const [session, setSession] = useState();
