@@ -33,13 +33,18 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async session({ token, session }) {
+    session({ token, session }) {
       if (token) {
         session.user.id = token.id;
         session.user.name = token.name;
         session.user.email = token.email;
-        session.user.image = token.image;
+        session.user.image = token.picture;
       }
+
+      return session;
     },
+    async jwt({token, user}) {
+        const dbuser = await db.
+    }
   },
 };
