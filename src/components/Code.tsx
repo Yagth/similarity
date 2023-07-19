@@ -1,6 +1,6 @@
 "use client";
 import { FC, useEffect, useState } from "react";
-import { type Language, Highlight, defaultProps } from "prism-react-renderer";
+import Highlight, { type Language, defaultProps } from "prism-react-renderer";
 import { useTheme } from "next-themes";
 import darkTheme from "prism-react-renderer/themes/nightOwl";
 import lightTheme from "prism-react-renderer/themes/nightOwlLight";
