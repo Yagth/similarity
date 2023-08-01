@@ -6,6 +6,7 @@ import { createApiKey } from "../helpers/create-api-key.ts";
 import { toast } from "./ui/Toast";
 import LargeHeading from "@/ui/LargeHeading";
 import Paragraph from "@/ui/Paragraph";
+import { Input } from "@/ui/Input";
 import CopyButton from "@/components/CopyButton";
 
 const RequestApiKey: FC = () => {
@@ -53,9 +54,16 @@ const RequestApiKey: FC = () => {
           {apiKey ? (
             <CopyButton
               type="button"
+              valueToCopy={apiKey}
               className="absolute inset-y-0 right-0 animate-in fade-in duration-300"
             />
-          ) : null}
+          ) : /* "??" means if the variable means null or undefined  */
+          null}
+          <Input
+            readOnly
+            value={apiKey ?? ""}
+            placeholder="Request API key to display it here"
+          />
         </div>
       </form>
     </div>
