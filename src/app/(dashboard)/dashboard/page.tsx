@@ -1,14 +1,28 @@
 import { FC } from "react";
 import type { Metadata } from "next";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/auth";
+import { notFound } from "next/navgation";
+import RequestApiKey from "@components/RequestApiKey";
+import ApiDashboard from "@components/ApiDashboard";
 
 export const metadata: Metadata = {
   title: "Similarity API | Dashboard",
   description: "Free and open-source text similarity API",
 };
-interface pageProps {}
 
-const page: FC<pageProps> = ({}) => {
-  return <div>page</div>;
+const page = async () => {
+  const user = await getServerSession(authOptions);
+  if (!user) return notFound();
+
+  const apiKey = await db.apiKey.findFirst({
+    where: { userId: user.user.id, enabled: true },
+  });
+  return (
+    <div className="max-w-2xl mx-auto mt-16">
+      (apiKey ? <ApiDashboard /> : <RequestApiKey />)
+    </div>
+  );
 };
 
 export default page;
