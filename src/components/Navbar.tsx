@@ -1,3 +1,5 @@
+"use client";
+
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { FC, useState, useEffect } from "react";
@@ -5,9 +7,11 @@ import { buttonVariants } from "@/ui/Button";
 import SigninButton from "@/ui/SigninButton";
 import SignOutButton from "@/ui/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
-import { authOptions } from "@/lib/auth";
+import authOptions from "../pages/api/auth/[...nextauth].ts";
 
 const getSession = async () => {
+  // console.log(authOptions);
+
   return await getServerSession(authOptions);
 };
 
