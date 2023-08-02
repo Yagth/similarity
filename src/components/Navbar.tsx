@@ -5,20 +5,19 @@ import { buttonVariants } from "@/ui/Button";
 import SigninButton from "@/ui/SigninButton";
 import SignOutButton from "@/ui/SignOutButton";
 import ThemeToggle from "@/components/ThemeToggle";
+import { authOptions } from "@/lib/auth";
+
+const getSession = async () => {
+  return await getServerSession(authOptions);
+};
 
 const Navbar = () => {
-  const [session, setSession] = useState();
+  const [session, setSession] = useState(null);
 
   useEffect(() => {
-    // React advises to declare the async function directly inside useEffect
-    async function getSession() {
-      const session = await getServerSession();
+    getSession().then((session) => {
       setSession(session);
-    }
-
-    if (!session) {
-      getSession();
-    }
+    });
   }, [session]);
 
   return (
