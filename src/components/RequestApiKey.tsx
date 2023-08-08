@@ -2,7 +2,7 @@
 
 import { FC, FormEvent, useState } from "react";
 import { Key } from "lucide-react";
-import { createApiKey } from "../helpers/create-api-key.ts";
+import { createApiKey } from "../helpers/create-api-key";
 import { toast } from "./ui/Toast";
 import LargeHeading from "@/ui/LargeHeading";
 import Paragraph from "@/ui/Paragraph";
@@ -57,7 +57,7 @@ const RequestApiKey: FC = () => {
               valueToCopy={apiKey}
               className="absolute inset-y-0 right-0 animate-in fade-in duration-300"
             />
-          ) : /* "??" means if the variable means null or undefined  */
+          ) : /* "??" means if the variable is null or undefined  */
           null}
           <Input
             readOnly
