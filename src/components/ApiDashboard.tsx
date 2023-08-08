@@ -1,8 +1,5 @@
-import { FC } from "react";
 
-interface ApiDashboardProps {}
-
-const ApiDashboard: FC<ApiDashboardProps> = ({}) => {
+const ApiDashboard= async () => {
   return <div>ApiDashboard</div>;
 };
 
