@@ -57,7 +57,7 @@ const RequestApiKey: FC = () => {
               valueToCopy={apiKey}
               className="absolute inset-y-0 right-0 animate-in fade-in duration-300"
             />
-          ) : /* "??" means if the variable is null or undefined  */
+          ) : /* "??" means if the variable means null or undefined  */
           null}
           <Input
             readOnly
