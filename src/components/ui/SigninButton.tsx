@@ -19,7 +19,7 @@ const SigninButton: FC<SigninButtonProps> = ({}) => {
     } catch (error) {
       toast({
         title: "Error signing in",
-        messge: "Please try again later",
+        message: "Please try again later",
         type: "error",
       });
     }

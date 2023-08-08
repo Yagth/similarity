@@ -1,10 +1,11 @@
-import { FC } from "react";
 import type { Metadata } from "next";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { notFound } from "next/navigation";
 import RequestApiKey from "@/components/RequestApiKey";
 import ApiDashboard from "@/components/ApiDashboard";
+import { db } from "@/lib/db";
+
 
 export const metadata: Metadata = {
   title: "Similarity API | Dashboard",
