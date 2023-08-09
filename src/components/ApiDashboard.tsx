@@ -42,12 +42,7 @@ const ApiDashboard = async () => {
       <LargeHeading>Welcome back, {user.user.name} </LargeHeading>
       <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start items-center">
         <Paragraph>Your API Key:</Paragraph>
-        <CopyButton
-          type="button"
-          valueToCopy={activeApiKey.key}
-          className="w-fit truncate"
-        />
-        {/* <Input className="w-fit truncate" readOnly value={activeApiKey.key} /> */}
+        <Input className="w-fit truncate" readOnly value={activeApiKey.key} />
         <ApiKeyOptions
           apiKeyId={activeApiKey.id}
           apiKeyKey={activeApiKey.key}
