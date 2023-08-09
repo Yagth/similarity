@@ -3,9 +3,9 @@ import { FC } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/ui/Tabs";
 import SimpleBar from "simplebar-react";
 import Code from "@/components/Code";
-import { nodejs, python } from "../helpers/documentation-code.ts";
+import { nodejs, python } from "../helpers/documentation-code";
 
-const DocumentationTabs: FC<> = () => {
+const DocumentationTabs: FC = () => {
   return (
     <Tabs defaultValue="nodejs" className="max-w-2xl w-full">
       <TabsList>
