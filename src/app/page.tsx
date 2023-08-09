@@ -21,7 +21,7 @@ export default function Home() {
             Easily determine <br /> text similarity
           </LargeHeading>
           <Paragraph className="max-w-xl lg:text-left">
-            WIth the text similarity API, you can easily determine teh
+            With the text similarity API, you can easily determine the
             similarity between two pieces of text with a free{" "}
             <Link
               href="/login"

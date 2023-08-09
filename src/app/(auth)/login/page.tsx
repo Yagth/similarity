@@ -24,8 +24,8 @@ const page: FC = () => {
           </Link>
           <LargeHeading>Welcome back</LargeHeading>
           <Paragraph>Please sign in using your google account.</Paragraph>
-          <UserAuthForm />
         </div>
+        <UserAuthForm />
       </div>
     </div>
   );

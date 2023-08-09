@@ -5,7 +5,9 @@ import { FC, useState } from "react";
 import Button from "./ui/Button";
 import { toast } from "./ui/Toast";
 
-const UserAuthForm: FC = () => {
+interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
+
+const UserAuthForm: FC<UserAuthFormProps> = ({ className, ...props }) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const loginWithGoogle = async () => {
@@ -24,11 +26,10 @@ const UserAuthForm: FC = () => {
     }
   };
   return (
-    <div className={cn("flex justify-center")}>
-      UserAuthForm
+    <div className={cn("flex justify-center", className)}>
       <Button
         isLoading={isLoading}
-        className="max-w-sm w-full"
+        className="max-w-sm w-full bg-slate-200"
         onClick={loginWithGoogle}
       >
         {isLoading ? null : (
