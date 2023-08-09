@@ -52,7 +52,7 @@ const Code: FC<CodeProps> = ({
             className +
             "transition-all w-fit bg-transparent duration-100 py-0 no-scrollbar"
           }
-          style={{ maxHeigh: show ? lines * 24 : 0, opacity: show ? 1 : 0 }}
+          style={{ maxHeight: show ? lines * 24 : 0, opacity: show ? 1 : 0 }}
         >
           {tokens.map((line, i) => {
             // esline-disable-next-line no-unused-vars
