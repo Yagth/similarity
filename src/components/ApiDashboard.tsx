@@ -8,6 +8,7 @@ import Paragraph from "@/ui/Paragraph";
 import { Input } from "@/ui/Input";
 import Table from "@/ui/Table";
 import ApiKeyOptions from "@/components/ApiKeyOptions";
+import CopyButton from "@/components/CopyButton";
 
 const ApiDashboard = async () => {
   const user = await getServerSession(authOptions);
@@ -41,7 +42,12 @@ const ApiDashboard = async () => {
       <LargeHeading>Welcome back, {user.user.name} </LargeHeading>
       <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start items-center">
         <Paragraph>Your API Key:</Paragraph>
-        <Input className="w-fit truncate" readOnly value={activeApiKey.key} />
+        <CopyButton
+          type="button"
+          valueToCopy={activeApiKey.key}
+          className="w-fit truncate"
+        />
+        {/* <Input className="w-fit truncate" readOnly value={activeApiKey.key} /> */}
         <ApiKeyOptions
           apiKeyId={activeApiKey.id}
           apiKeyKey={activeApiKey.key}
